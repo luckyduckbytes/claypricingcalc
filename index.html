@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="selector">
+      
+      <!-- Step 1: Select a Software Package -->
+      <div id="step-1" class="step">
+        <h2>Step 1: Select a Software Package</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>Professional</h3>
+            <p>Price: $7,200</p>
+            <p>StreamSight Hours: 1,000</p>
+            <p>Projects: One </p>
+            <p>TourQ Application: One</p>
+            <p>Data Chatbot: 1 User</p>
+            <p>-</p>
+            <button class="select-package" data-price="7200" data-name="Professional">Select</button>
+          </div>
+          <div class="card">
+            <h3>Corporate</h3>
+            <p>Price: $18,750</p>
+            <p>StreamSight Hours: 2,500</p>
+            <p>Projects: Two </p>
+            <p>TourQ Application: Two</p>
+            <p>Data Chatbot: 10 Users</p>
+            <p>Decor X Application: One</p>
+            <button class="select-package" data-price="18750" data-name="Corporate">Select</button>
+          </div>
+          <div class="card">
+            <h3>Advanced</h3>
+            <p>Price: $37,200</p>
+            <p>StreamSight Hours: 4,500</p>
+            <p>Projects: Three </p>
+            <p>TourQ Application: Three</p>
+            <p>Data Chatbot: 25 Users</p>
+            <p>Decor X Application: Two</p>
+            <button class="select-package" data-price="37200" data-name="Advanced">Select</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Add NexusOS -->
+      <div id="step-2" class="step hidden">
+        <h2>Step 2: Optional - Add NexusOS</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>NexusOS</h3>
+            <p>Price: $4,500</p>
+            <p>Features: Unlimited users, 500 legal docs</p>
+            <button id="add-nexus" data-price="4500">Add NexusOS</button>
+          </div>
+        </div>
+        <div class="buttons">
+          <button id="back-2">Back</button>
+          <button id="next-2">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Select a 3D Package -->
+      <div id="step-3" class="step hidden">
+        <h2>Step 3: Select a 3D Package</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>A5</h3>
+            <p>Price: $4,800</p>
+            <p>Includes: 2 Interiors (Homes/Townhomes)</p>
+            <button class="select-3d" value="A5" data-price="4800" data-name="A5">Select</button>
+          </div>
+          <div class="card">
+            <h3>B2</h3>
+            <p>Price: $11,000</p>
+            <p>Includes: 5 Interiors (Homes/Townhomes)</p>
+            <button class="select-3d" value="B2" data-price="11000" data-name="B2">Select</button>
+          </div>
+          <div class="card">
+            <h3>C1</h3>
+            <p>Price: $20,000</p>
+            <p>Includes: 14 Interiors (Homes/Townhomes)</p>
+            <button class="select-3d" value="C1" data-price="20000" data-name="C1">Select</button>
+          </div>
+        </div>
+        <div class="buttons">
+          <button id="back-3">Back</button>
+          <button id="next-3">Next</button>
+        </div>
+      </div>
+
+       <!-- Step 4 -->
+       <div id="step-4" class="step hidden">
+        <h2>Step 4: Additional 3D Models?</h2>
+        <form id="step-4-form">
+          <div class="row">
+            <label for="homes-units">Per Interior (Homes/Townhomes):</label>
+            <input type="number" id="homes-units" placeholder="Enter number of units" min="0">
+            <button type="button" id="add-homes">Add</button>
+          </div>
+          <div class="row">
+            <label for="apartments-units">Per Interior (Apartments):</label>
+            <input type="number" id="apartments-units" placeholder="Enter number of units" min="0">
+            <button type="button" id="add-apartments">Add</button>
+          </div>
+        </form>
+        <div class="buttons">
+          <button id="back-4">Back</button>
+          <button id="next-4">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 5: Select Exterior/Amenity Package -->
+      <div id="step-5" class="step hidden">
+        <h2>Step 5: Select Exterior/Amenity Package</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>KB1</h3>
+            <p>Price: $12,000</p>
+            <p>Includes: 2 Exteriors + Amenities</p>
+            <button class="select-exterior" data-price="12000" data-name="KB1">Select</button>
+          </div>
+          <div class="card">
+            <h3>KB2</h3>
+            <p>Price: $21,000</p>
+            <p>Includes: 5 Exteriors + Amenities</p>
+            <button class="select-exterior" data-price="21000" data-name="KB2">Select</button>
+          </div>
+        </div>
+        <div class="buttons">
+          <button id="back-5">Back</button>
+          <button id="next-5">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 6: Additional Amenity Models -->
+      <div id="step-6" class="step hidden">
+        <h2>Step 6: Additional Exterior/Amenity Models?</h2>
+        <form id="step-6-form">
+          <div class="row">
+            <label for="exterior-units">Per Exterior:</label>
+            <input type="number" id="exterior-units" placeholder="Enter number of units" min="0">
+            <button type="button" id="add-exterior">Add</button>
+          </div>
+          <div class="row">
+            <label for="amenity-units">Per Amenity:</label>
+            <input type="number" id="amenity-units" placeholder="Enter number of units" min="0">
+            <button type="button" id="add-amenity">Add</button>
+          </div>
+        </form>
+        <div class="buttons">
+          <button id="back-6">Back</button>
+          <button id="finish">Finish</button>
+        </div>
+      </div>
+
+      <!-- Pricing Summary -->
+      <div id="summary" class="step hidden">
+        <h2>Pricing Summary</h2>
+        <div id="summary-details">
+          <!-- Pricing breakdown will be dynamically generated -->
+        </div>
+        <div class="buttons">
+        </div>
+      </div>
+    </div>
+
+    <!-- Total Price Section -->
+    <div class="total">
+        <h3>Total: $<span id="total-price">0</span></h3>
+        <ul id="selected-items">
+          <!-- Selected items will be dynamically added here -->
+        </ul>
+        <button id="reset">Reset</button>
+      </div>
+  <script src="script.js"></script>
+</body>
+</html>

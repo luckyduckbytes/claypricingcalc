@@ -1,0 +1,279 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif; /* Sets the font style for the entire page */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Arranges content in a column */
+    align-items: center; /* Centers content horizontally */
+    background-color: #f9f9f9; /* Light gray background */
+}
+
+/* Main container for the pricing calculator */
+.container {
+    display: flex; /* Enables flexbox layout */
+    flex-direction: row; /* Aligns children side by side */
+    justify-content: space-between; /* Evenly distributes space between children */
+    width: 90%; /* Occupies 90% of the viewport width */
+    max-width: 1200px; /* Sets a maximum width for larger screens */
+    margin-top: 20px; /* Adds spacing above the container */
+}
+
+/* Section for steps and summary */
+.selector, .summary {
+    width: 60%; /* Takes up 60% of the container width */
+}
+
+/* Total price panel styling */
+.total {
+    width: 30%; /* Takes up 30% of the container width */
+    position: sticky; /* Sticks the panel in place while scrolling */
+    top: 20px; /* Keeps the panel 20px from the top of the screen */
+    background: white; /* White background for the total panel */
+    border: 1px solid #ddd; /* Adds a light gray border */
+    padding: 15px; /* Adds padding inside the panel */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    border-radius: 8px; /* Slightly rounds the corners */
+}
+
+.total h3 {
+    font-size: 20px; /* Sets a slightly larger font size */
+    margin-bottom: 15px; /* Adds spacing below the heading */
+}
+
+.total ul {
+    list-style: none; /* Removes default bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0 0 15px 0; /* Adds spacing below the list */
+}
+
+.total ul li {
+    display: flex; /* Enables side-by-side layout */
+    justify-content: space-between; /* Space between item name and price */
+    margin-bottom: 8px; /* Adds spacing between rows */
+    font-size: 14px; /* Sets a readable font size */
+    color: #333; /* Dark gray text color */
+}
+
+/* Class to hide steps */
+.hidden {
+    display: none; /* Completely hides the element */
+}
+
+/* Card container styling */
+.card-container {
+    display: flex; /* Enables flexbox layout for cards */
+    flex-wrap: wrap; /* Allows cards to wrap to the next row if needed */
+    justify-content: space-around; /* Distributes cards evenly with space around them */
+    gap: 20px; /* Adds spacing between cards */
+    margin-top: 20px; /* Adds spacing above the card group */
+}
+
+/* Individual card styling */
+.card {
+    background: linear-gradient(145deg, #f0f0f5, #ffffff);
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Card description */
+.card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    color: #555;
+    font-size: 14px;
+    text-align: left;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.card ul li::before {
+    content: "✔";
+    margin-right: 10px;
+    color: #007BFF;
+    font-size: 14px;
+}
+
+/* Card button styling */
+.card button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* General button styling */
+button {
+    padding: 10px 15px; /* Adds padding inside the button */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Adds rounded corners */
+    background-color: #007BFF; /* Sets the default background color (blue) */
+    color: white; /* Makes the button text white */
+    font-size: 14px; /* Sets a readable font size */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #0056b3; /* Changes the background to a darker blue on hover */
+}
+
+/* Styling for rows in Step 4 and Step 6 as cards */
+.row {
+    display: flex; /* Aligns items in a row */
+    align-items: center; /* Vertically centers items */
+    margin-bottom: 20px; /* Adds more space between rows */
+    background: linear-gradient(145deg, #f0f0f5, #ffffff); /* Subtle gradient background for card effect */
+    border-radius: 12px; /* Rounds corners for a card-like appearance */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+    padding: 20px; /* Adds padding inside the card */
+    border: 1px solid #ddd; /* Light border for better definition */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effects */
+}
+
+/* Optional hover effect for row cards */
+.row:hover {
+    transform: translateY(-5px); /* Lifts the card slightly on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+/* Styling for labels inside row cards */
+.row label {
+    flex: 2; /* Makes labels take up more space */
+    margin-right: 15px; /* Adds more spacing between label and input */
+    font-size: 14px; /* Font size for labels */
+    font-weight: bold; /* Makes labels stand out */
+    color: #555; /* Medium gray color */
+}
+
+/* Styling for inputs inside row cards */
+.row input {
+    flex: 1; /* Allows inputs to resize dynamically */
+    margin-right: 15px; /* Adds more spacing between input and button */
+    padding: 10px 12px; /* Adds padding inside inputs */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 6px; /* Rounds corners for inputs */
+    font-size: 14px; /* Sets a readable font size */
+    color: #333; /* Dark gray text color */
+    background: #fafafa; /* Light gray background for inputs */
+}
+
+/* Styling for buttons inside row cards */
+.row button {
+    flex: 0; /* Keeps button at a fixed size */
+    padding: 10px 15px; /* Adds padding for buttons */
+    background-color: #007BFF; /* Blue background for buttons */
+    color: white; /* White text color */
+    border: none; /* Removes default border */
+    border-radius: 8px; /* Adds rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 14px; /* Font size for buttons */
+    font-weight: bold; /* Bold text for buttons */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+}
+
+/* Hover effect for buttons inside row cards */
+.row button:hover {
+    background-color: #0056b3; /* Darker blue background on hover */
+    transform: scale(1.05); /* Slightly enlarges the button */
+}
+
+/* Styling for the reset button */
+#reset {
+    margin-top: 20px; /* Adds spacing above the reset button */
+    width: 100%; /* Makes the button stretch the full width of its container */
+    background-color: #FF6347; /* Sets the background to a red-orange color */
+    font-weight: bold; /* Makes the text bold */
+}
+
+/* Hover effect for the reset button */
+#reset:hover {
+    background-color: #CC4E38; /* Changes the reset button background to a darker red-orange */
+}
+
+/* Headings for each step */
+h2 {
+    font-size: 20px; /* Sets a medium-large font size */
+    margin-bottom: 50px; /* Adds spacing below the heading */
+    color: #333; /* Dark gray text color */
+    text-align: center; /* Centers the text horizontally */
+}
+
+/* Alignment for Back and Next buttons */
+.buttons {
+    display: flex; /* Enables flexbox layout */
+    justify-content: space-between; /* Positions buttons at far ends */
+    width: 100%; /* Ensures buttons take full width */
+    margin-top: 30px; /*Adds extra spacing above the buttons */
+}
+
+.buttons button:first-child {
+    align-self: flex-start; /* Align Back button to the far left */
+}
+
+.buttons button:last-child {
+    align-self: flex-end; /* Align Next button to the far right */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stacks elements vertically on smaller screens */
+        align-items: center; /* Centers content horizontally */
+    }
+
+    .selector, .summary, .total {
+        width: 100%; /* Makes each section take up the full width */
+        margin-bottom: 20px; /* Adds spacing between sections */
+    }
+
+    .buttons {
+        flex-direction: column; /* Stacks buttons vertically */
+        align-items: center; /* Centers buttons horizontally */
+    }
+
+    button {
+        margin-bottom: 10px; /* Adds spacing below each button */
+        width: 80%; /* Makes buttons take up 80% of the container width */
+    }
+}
